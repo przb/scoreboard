@@ -5,68 +5,49 @@
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>Todo List</title>
-        <!--<link rel="stylesheet" type="text/css" href="todo.css" />-->
-        <style>
-            table, th, td{
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                padding-left: 18px;
-                padding-right: 18px;
-                padding-top: 6px;
-                padding-bottom: 6px;
-            }
-            input {
-                width: 75px;
-            }
-            .add{
-                background-color  : rgb(113, 113, 252);
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="scoreboard.css" />
     </head>
     <body>
         
         <script type="text/javascript" src="scoreboard.js"></script>
-        <input type="button" id="button" onclick="addItems()" value="test" />
-        <br />
-        <br />
-        <br />
-        <table id="scoreboard">
-            <tr>
-                <td onclick="debug()">Round (Cards)</td>
-                <th>Ben</th>
-                <th>Josh</th>
-                <th>Mom</th>
-                <th>Dad</th>
-                <th>Joy</th>
-                <th>Gloria</th>
-                <th>Ellen</th>
-                <th>Becky</th>
-            </tr>
+        <center>
+            <h1>Welcome to the 3-13 Scoreboard!</h1>
+            <div class="instructions">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>To get started, enter a player Name</li>
+                    <li> To add the score, enter the points in the text box, and click "Add"</li>
+                    <li>To start a new game, refresh the page</li>
+                </ul>
+            </div>
+            <br />
+            <br />
+            <div class="addPlayer">
+                <input type="text" id="addPlayer" placeholder="Player Name" style="width: 150px;">
+                <input type="button" id="addPlayerButton" onclick="addPlayer()" value="Add Player" />
+            </div>
+            <br />
+            <br />
+            <table id="scoreboard">
+                <tr id="players">
+                    <td onclick="debug()">Round (Cards)</td>
+                    
+                </tr>
 
-            <tr>
-                <th>Total</th>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-                <td class="totalscore">0</td>
-            </tr>
+                <tr id="total">
+                    <th>Total</th>
+                
+    
+                    
+                </tr>
 
-            <tr class="add" >
-                <td class="add" onclick="addScores()">Add</td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-                <td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>
-            </tr>
-        </table>
+                <tr id="add">
+                    <td class="add" onclick="addItems()">Add</td>
+                    
+                    
+                    
+                </tr>
+            </table>
+        </center>
     </body>
 </html>

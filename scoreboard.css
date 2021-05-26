@@ -1,0 +1,71 @@
+/*
+Colors:
+#F8B195
+#F67280
+#C06C84
+#6C5B7B
+#355C7D
+*/
+
+html, body{
+    background-color: #f8b195;
+}
+table, th, td{
+    color: #355c7d;
+    border: 6px Outset #f67280;
+    /*border-collapse: collapse;*/
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+input.scorebox {
+    width: 75px;
+}
+
+li{
+    text-align: justify;
+}
+.addPlayer{
+    align-items: center;
+    display: inline-block;
+    color: #355c7d;
+    border: 6px solid #f67280;
+    border-collapse: collapse;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.instructions{
+    align-items: center;
+    display: inline-block;
+    background-color: #C06C84;
+    border: 6px solid #C06C84;
+    border-collapse: collapse;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.add:hover{
+    background-color  : #C06C84;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.addPlayer{
+    align-self: center;
+    background-color: #6C5B7B;
+    width: 25%;
+}

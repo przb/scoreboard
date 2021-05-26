@@ -22,7 +22,15 @@ function addItems(){
 
     //Loop to add all players scores to the table    
     for (var i = 0; i < numberItems; i++){
-        var score = parseInt(document.getElementsByClassName("scorebox")[i].value);
+        var score;
+        if (document.getElementsByClassName("scorebox")[i].value == ""){
+            score = 0;
+        }
+        else{
+            score = parseInt(document.getElementsByClassName("scorebox")[i].value);
+            
+        }
+
         playerScore.push(score);
 
         //Insert the value of the player's score for the round
@@ -49,15 +57,36 @@ function addScore(playerScore){
         //Get the total variable from the innerhtml of the totalscore class
         var total = parseInt(document.getElementsByClassName("totalscore")[i].innerHTML.trim());
 
+        //Add the player score to the total
         total = total + playerScore[i];
+
+        //Set the total HTML to the total
         document.getElementsByClassName("totalscore")[i].innerHTML = total;
+        
+        //Add the total to the playertotal array
         playerTotal.push(total);
         
     }
+    
+    //Log the player total array
     console.log(playerTotal);
     
     }
 
-    function debug(){
+    function addPlayer(){
+        var newPlayerName = document.getElementById("addPlayer").value;
+        var newPlayerCell = players.insertCell(-1);
+        newPlayerCell.innerHTML = newPlayerName;
+
+        var newTotalCell = total.insertCell(-1);
+        newTotalCell.outerHTML = "<td class=\"totalscore\">0</td>";
         
+        var newAddCell = add.insertCell(-1);
+        newAddCell.outerHTML = '<td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>';
+
+        document.getElementById("addPlayer").value = "";
+    }
+
+    function debug(){
+        console.log(document.getElementsByClassName("scorebox")[1]);
 }
