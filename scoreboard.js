@@ -74,6 +74,12 @@ function addScore(playerScore){
     }
 
     function addPlayer(){
+        while(document.getElementById("ExamplePlayer")){
+            players.deleteCell(-1)
+            total.deleteCell(-1)
+            add.deleteCell(-1)
+        }
+
         var newPlayerName = document.getElementById("addPlayer").value;
         var newPlayerCell = players.insertCell(-1);
         newPlayerCell.innerHTML = newPlayerName;
@@ -85,6 +91,27 @@ function addScore(playerScore){
         newAddCell.outerHTML = '<td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>';
 
         document.getElementById("addPlayer").value = "";
+
+        
+        /* if(document.getElementById("ExamplePlayer")){
+            players.deleteCell(-1)
+            total.deleteCell(-1)
+            add.deleteCell(-1)
+        }
+        else{
+            var newPlayerName = document.getElementById("addPlayer").value;
+            var newPlayerCell = players.insertCell(-1);
+            newPlayerCell.innerHTML = newPlayerName;
+    
+            var newTotalCell = total.insertCell(-1);
+            newTotalCell.outerHTML = "<td class=\"totalscore\">0</td>";
+            
+            var newAddCell = add.insertCell(-1);
+            newAddCell.outerHTML = '<td><input type="text" id="1" placeholder="Score" class="scorebox"/></td>';
+    
+            document.getElementById("addPlayer").value = "";
+
+        } */
     }
 
     function debug(){
