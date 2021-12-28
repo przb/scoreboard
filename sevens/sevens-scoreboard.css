@@ -8,6 +8,10 @@ table, th, td{
     padding-right: 18px;
     padding-top: 6px;
     padding-bottom: 6px;
+    user-select: none;
+}
+td{
+    user-select: none;
 }
 tr.debug:before{
     content:attr(data-hover);
