@@ -1,0 +1,14 @@
+table, th, td{
+    color: #355c7d;
+    border: 6px solid black;
+    /*border-collapse: collapse;*/
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+tr.debug:before{
+    content:attr(data-hover);
+}
