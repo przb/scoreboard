@@ -4,6 +4,7 @@ var round = 2;
 function debug() {
     scoreboard_table = document.getElementById("scoreboard");
     console.log(scoreboard_table);
+    console.log(document.getElementById("addPlayerScore"));
 }
 
 function addRow() {
@@ -17,7 +18,7 @@ function addRow() {
 
 function removeLastRow() {
     scoreboard_table = document.getElementById("scoreboard");
-    if (scoreboard_table.rows.length > 1) {
+    if (scoreboard_table.rows.length > document.getElementById("addPlayerScore").rowIndex + 1) {
         scoreboard_table.deleteRow(-1);
     }
 }
